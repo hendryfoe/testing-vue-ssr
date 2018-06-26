@@ -1,0 +1,54 @@
+{
+  "name": "testing-vue-ssr",
+  "version": "0.0.1",
+  "description": "testing vue ssr from https://ssr.vuejs.org",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write '{src,__{tests,mocks}__}/**/*.js' './server.js'",
+    "build:server": "webpack --config ./config/webpack.server.config.js",
+    "build:client": "webpack --config ./config/webpack.client.config.js",
+    "build": "rimraf './dist' && yarn build:client && yarn build:server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hendryfoe/testing-vue-ssr.git"
+  },
+  "keywords": [
+    "vue",
+    "ssr"
+  ],
+  "author": "Hendry Foe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hendryfoe/testing-vue-ssr/issues"
+  },
+  "homepage": "https://github.com/hendryfoe/testing-vue-ssr#readme",
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "babel-loader": "^8.0.0-beta",
+    "express": "^4.16.3",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.16",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.5",
+    "css-loader": "^0.28.11",
+    "eslint": "^5.0.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "prettier": "^1.13.5",
+    "rimraf": "^2.6.2",
+    "vue-loader": "^15.2.4",
+    "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-merge": "^4.1.3",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
